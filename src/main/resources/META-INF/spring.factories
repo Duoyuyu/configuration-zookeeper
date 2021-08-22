@@ -1,0 +1,11 @@
+#加载项目内部的配置文件实现
+org.springframework.boot.env.EnvironmentPostProcessor=\
+   com.duoyu.springbootzookeeper.ExtendEnvironmentPostProcessor
+
+#容器初始化时加载所有的扩展点
+org.springframework.context.ApplicationContextInitializer=\
+  com.duoyu.springbootzookeeper.config.ZookeeperApplicationContextInitializer
+
+#加载自定义的zookeeper扩展点
+com.duoyu.springbootzookeeper.service.PropertySourceLocator=\
+   com.duoyu.springbootzookeeper.service.impl.ZookeeperPropertySourceLocator
